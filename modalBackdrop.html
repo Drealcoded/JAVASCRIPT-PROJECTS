@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: brown;
+        }
+        .backDrop{
+            background-color: brown;
+            position: fixed;
+            width: 100%;
+            /* height: 500px; */
+            z-index: 1;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #modalT{
+            width: 700px;
+            height: 500px;
+            left: 25rem;
+            top: 6rem;
+            background-color: gray;
+            margin: auto;
+            position: absolute;
+        }
+        .cancel{
+            font-size: 40px;
+            text-align: right;
+        }
+        #displayModalButton{
+            padding: 20px;
+            background-color: blue;
+            color: white;
+        }
+        #modalT p{
+            text-align: center;
+            color: red;
+            font-size: 17px;
+        }
+        #modalT h3{
+            text-align: center;
+            color: darkgreen;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="modalBox" class="backDrop">
+        <div id="modalT">
+            
+            <span class="cancel" id="cancelBtn" onclick="cancelModal()">&times;</span>
+            <h3> WELCOME TO THE CHURCH OF SATAN</h3>
+            <p> Here are some examples of group rules:</p>
+            <p>
+
+                Everyone is welcome to have a say <br> 
+                We listen to each other, and show respect for each other <br>
+                We have one person speaking at a time in groups <br>
+                We work to a consensus when decisions are to be made <br>
+                Even if we disagree, we don’t judge others <br>
+                We always treat each other with respect <br>
+                We work towards the positive <br>
+                Personal Information we share in meetings is kept confidential <br>
+                We aim to share, support, learn and build each other up <br>
+                We are honest and we have fun
+            </p>
+        </div>
+       
+    </div>
+
+    <button id="displayModalButton" onclick="showModal()">CLICK HERE</button>
+
+
+    
+</body>
+</html>
+<script>
+
+    let modal = document.getElementById('modalBox')
+    let cancelBtn = document.getElementById('cancelBtn')
+    let displayModalButton =document.getElementById('displayModalButton')
+
+
+
+    function showModal() {
+        modal.style.display = 'block'
+            }
+
+    function cancelModal() {
+        modalT.style.display = 'none'
+    }
+</script>

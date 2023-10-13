@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let num = 20
+        let userName = 'taiwo'
+        let isLOggedIn = true
+        let user = {name: 'taiwo', age: 49, status: 'married'}
+
+        let userList = [
+            {name: 'taiwo', age: 49, status: 'married'},
+            {name: 'test', age: 49, status: 'married'},
+            {name: 'ahmed', age: 49, status: 'married'}
+        ]
+
+        
+        localStorage.setItem('age', num)
+        localStorage.setItem('userName', userName)
+        localStorage.setItem('userLoggedIn', isLOggedIn)
+        localStorage.setItem('user', JSON.stringify(user))
+        localStorage.setItem('userList', JSON.stringify(userList))
+
+        // retrive items from local storage
+
+        let age = localStorage.getItem('age')
+        let name = localStorage.getItem('userName')
+        let userData = JSON.parse(localStorage.getItem('user'))
+
+        let userArr = JSON.parse(localStorage.getItem('userList'))
+    
+
+
+    </script>
+</body>
+</html>

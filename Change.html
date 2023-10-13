@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inpVal" onkeyup="handleChange()">
+    <h1 class="show"></h1>
+    <script>
+        let input = document.querySelector('#inpVal')
+        let show = document.querySelector('.show');
+        
+        function handleChange() {
+        console.log(input.value);
+            // arr = ['good'];
+            let inputValue = input.value;
+            
+            if (inputValue === 'male' || inputValue ==='female'){
+            show.innerHTML ='gender'
+            } 
+        else if ( inputValue === 'gender') {
+            show.innerHTML = 'Male or Female'
+        }
+        else (
+            show.innerHTML = inputValue
+        )
+        
+
+        // if (inp.value === 'gender'){
+        //     show.innerHTML = inp.value.replace('gender', 'female')
+            
+        // }else{
+        //     show.innerHTML = inp.value.replace('female', 'gender')
+        // }
+
+    }
+    
+
+    handleChange()
+        // function handleChange(){
+        //     // console.log(inp.value);
+        //     console.log(inp.value.replace('good', 'hi'));
+        //     show.innerHTML.replace('good', 'hi')
+        // }
+    </script>
+</body>
+</html>
+
+<!-- <input type="text" id="inpVal" onkeyup="handleChange()">
+<h1 class="show"></h1>
+<script>
+    let inp = document.querySelector('#inpVal')
+    let show = document.querySelector('.show')
+
+
+    function handleChange(){
+        console.log(inp.value);
+       
+
+        show.innerHTML = inp.value -->

@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .error{
+        color: red;
+    }
+    .sucess{
+        color: green;
+    }
+</style>
+<body>
+    <div>
+        <div class="error">Error</div>
+        <div class="error">sucess</div>
+        <div class="error">Error</div>
+        <div class="error">sucess</div>
+        <div class="error">Error</div>
+        <div class="error">sucess</div>
+
+        <button onclick="handleClick()">Click</button>
+    </div>
+   <script>
+    let tags = document.querySelectorAll('.error')
+
+    console.log(tags);
+
+   function handleClick(){
+    for(let i = 0; i < tags.length; i++){
+        if (tags[i].innerHTML === 'Error') {
+            tags[i].innerHTML = 'success'
+            tags[i].classList.toggle('success')
+            // tags[i].classList.to
+        }else if(tags[i].innerHTML === 'success'){
+            tags[i].innerHTML = 'Error'
+            tags[i].classList.toggle('error')
+        }
+    }
+
+   }
+
+//    8 data type in javascript
+
+   /* 
+    strings
+    number
+    null
+    undefine
+    boolean
+    symbol
+    bigint
+
+   
+   */
+//   non primitive data type
+
+   /* 
+    object
+   */
+  
+
+    // let tags = 100
+
+    // if (tags === 100) {
+    //     console.log('success');
+        
+        
+    // }else if (tags <= 80) {
+    //     console.log('error'); 
+    // }
+
+// for (let i = 0; i < tags.length; i++) {
+//    tags[i].classList.contains('error')
+    
+// }
+    //     let tags = document.querySelectorAll('#sucess')
+
+    // for (let i = 0; i < tags.length; i++) {
+    //     console.log(tags[i].innerHTML);
+   
+    // }
+
+   </script>
+        
+</body>
+</html>

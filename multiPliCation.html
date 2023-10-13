@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            
+            border: thin solid black;
+            width: 150px;
+            height: 80vh;
+            margin-top: 20px;
+
+        }
+        #View{
+            display: flex;
+            /* gap: 20px; */
+            flex-wrap: wrap;
+            height: 85vh;
+            flex-direction: column;
+        }
+        
+    </style>
+</head>
+<body>
+    <input type="text" id="inp">
+    <input type="text" id="box">
+
+    <button onclick="handleClick ()">Click Here</button>
+    
+    <div>
+        <div id="View"></div>
+
+    </div>
+
+</body>
+</html>
+<script>
+    let input = document.getElementById('inp')
+    let inp = document.getElementById('box')
+
+
+
+    function handleClick(){
+            console.log(Number(input.value));
+
+        
+    for ( let i = Number (input.value); i <= Number (inp.value); i++) {
+
+
+        for (let x = 1; x <= 12; x++){
+           View.innerHTML += ` <p>${i} * ${x} = ${i * x}</p> `
+           console.log(x);  
+        }
+    }
+}
+
+</script>

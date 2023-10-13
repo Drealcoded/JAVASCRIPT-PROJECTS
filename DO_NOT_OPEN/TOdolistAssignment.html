@@ -1,0 +1,165 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      
+    }
+    body{
+      background-color: #000080;
+    }
+
+    .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20vh;
+      gap:50px;
+      color: #fff;
+      
+    }
+    .view{
+      display: flex;
+      /* align-items: stretch; */
+      justify-content: space-between;
+      background-color: #f08080;
+      color: #fff;
+      /* gap: 150px; */
+      /* margin-bottom: 20px; */
+      
+      
+      
+      
+      
+    }
+    .inbox{
+      display: flex;
+      color: #fff;
+      justify-content: space-between;
+      /* gap: 150px; */
+      
+      
+    }
+    .box{ 
+      margin: auto;
+      /* max-width: 1164px; */
+    
+    }
+   
+  </style>
+  <body>
+    <h2 style="color: #fff;padding-top: 10px;"></h2>
+    <div class="container">
+      NAME :
+      <input type="text" id="Name" placeholder="Name" />
+      EMAIL :
+      <input type="text" id="email" placeholder="Email" />
+      AGE:
+      <input type="number" id="age" placeholder="Age" />
+
+      <button onclick="handleSubmit()">Submit</button>
+    </div>
+
+    <div class="box">
+      <div class="view">
+
+      <span>S/N</span>
+      <span>NAME</span>
+      <span>EMAIL</span>
+      <span>AGE</span>
+      <span>ACTIONS</span>
+      </div>
+    </div>
+
+    <div id="display"></div>
+
+    <script>
+
+
+
+
+
+      let allUsers = [];
+
+      // let user = document.querySelector('#name')
+      // let display = document.querySelector('#display')
+
+      // let newTodolist = ''
+
+      function handleSubmit() {
+        let userName = Name.value;
+        let emailVal = email.value;
+        let aged = age.value;
+
+        let theUsers = {
+          Name: userName,
+          email: emailVal,
+          age: aged,
+        };
+        allUsers.push(theUsers);
+
+        console.log(allUsers);
+
+        displayAll();
+      }
+
+
+      // localStorage.setItem('username', )
+      // localStorage.setItem('emailval', email)
+      // localStorage.setItem('aged', age)
+
+
+      function deleteTodo(index) {
+        allUsers.splice(index, 1);
+        // console.log("you deleted");
+        displayAll();
+      }
+
+      function editTodo(index) {
+        let addNew = allUsers.find(function(ele, i){
+          return i === index
+        })
+        
+
+        let newTodo = prompt (addNew, '')
+        // console.log(newTodo);
+
+        if (newTodo) {
+          allUsers.splice(index, 1 , newTodo)
+        }
+        displayAll()
+      }
+      
+
+
+      function displayAll() {
+        display.innerHTML = "";
+        allUsers.forEach((ele, index) => {
+          display.innerHTML += `<div class="view"
+          <span>${index+1}</span>
+          <span>${ele.Name}</span>
+          <span>${ele.email}</span>
+          <span>${ele.age}</span> <div id="action"> <button onclick="editTodo(${index})" >Edit</button>
+          <button onclick="deleteTodo(${index})">Delete</button></div>
+         </div>`;
+        });
+           localStorage.setItem('allUser', JSON.stringify(allUsers))
+      }
+      function getLocalData() {
+        storeData = localStorage.getItem('allUser');
+        if (storeData) {
+          allUsers = JSON.parse(storeData);
+          displayAll()
+        }
+      }
+
+      getLocalData();
+            </script>
+  </body>
+</html>

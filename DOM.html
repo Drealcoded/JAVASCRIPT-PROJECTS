@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    
+</head>
+<body>
+    <h1 id="h1TagTaxt">HEllo class</h1>
+
+    <button onclick="oslim()">Add styles</button>
+
+
+    <script>
+        // DOM
+        // dociment object model
+
+        let tag = document.getElementById('h1TagTaxt')
+       
+        // tag.innerHTML += 200
+        // tag.style.color = 'red'
+
+
+        console.log(tag.style);
+
+        console.log(tag.innerHTML);
+
+        // console.log(box.style);
+
+        // console.log(box.container);
+
+
+
+        function oslim(){
+            tag.innerHTML = 3000
+            tag.style.color = 'orange'
+            tag.style.backgroundColor ='purple'
+        }
+
+    </script>
+    
+</body>
+</html>

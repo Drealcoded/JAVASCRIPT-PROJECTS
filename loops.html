@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <p id="pTag">red</p>
+        <p id="pTag">yellow</p>
+        <p id="pTag">green</p>
+        <p id="pTag">purple</p>
+        <p id="pTag">orange</p>
+        <p id="pTag">blue</p>
+        <p id="pTag">crymson</p>
+        <p id="pTag">black</p>
+
+        <script>
+            // let tag = document.getElementById('pTag')
+            //let tag = document.querySelector('#pTag')
+            let tags = document.querySelectorAll('#pTag')
+
+            console.log(tags);
+            console.log(tags.length);
+            // console.log(tags[2].innerHTML);
+ 
+            for (let i = 0; i < tags.length; i++) {
+
+                tags[i].style.backgroundColor = tags[i].innerHTML
+                // tags[i].style.color = 'red'
+                // console.log(tags[i]);
+            }
+
+
+
+            // for(let i = 0; i < 10; i ++){
+            //     console.log(i);
+            // }
+
+        </script>
+</body>
+</html>

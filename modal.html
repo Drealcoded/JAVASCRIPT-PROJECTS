@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow-y: hidden;
+    }
+    #modal{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        height: 400px;
+        background-color: #ccc;
+
+    }
+    .none{
+        display: none;
+    }
+</style>
+<body>
+    
+
+    <div class="container">
+       <button onclick="toggleModla()" >Show Modal</button>
+     <div class="none" id="modal">
+        <button onclick="RemoveModal()">Close</button>
+     </div>
+   </div>
+
+<script>
+   let box = document.getElementById('modal')
+
+    // function toggleModla(){
+    // //    box.hidden = false
+    // if (box.hidden === true) {
+    //     box.hidden = false
+    // }else{
+    //     box.hidden = true
+    // }
+    // }
+    function toggleModla(){
+        // box.classList.add('ttrttr')
+        // box.classList.remove('none')
+
+        // if (box.classList.contains('none')) {
+        //    box.classList.remove('none') 
+        // }else{
+        //     box.classList.add('none')
+        // }
+        box.classList.remove('none')
+    }
+
+    function RemoveModal(){
+        box.classList.add('none')
+
+    }
+
+</script>
+    
+
+</body>
+</html>

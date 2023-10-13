@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <div>
+            <input type="text" id="userName" placeholder="name">
+        </div>
+        <div>
+            <input type="text" id="email" placeholder="email">
+        </div>
+        <button onclick="handleSubmit()">Submit</button>
+    </div>
+
+
+    <!-- <div>
+        <div>
+            <input type="text" id="fill" placeholder="Add task">
+        </div>
+
+        <button onclick="Add()">Add task</button>
+    </div> -->
+
+       
+
+    <script>
+        let input = document.getElementById('#fill')
+        let peoples = { name: 'to do' , status: false}
+
+        function Add() {
+           let name =  fill.value
+
+    
+        }
+
+
+        let Allusers = []
+        
+        // let obj = {title: 'new todo', status: false}
+
+        function handleSubmit(){
+            let username = userName.value
+            let emailVal = email.value
+
+            let singleUser = {
+                userName: username,
+                email: emailVal
+            }
+            Allusers.push(singleUser)
+
+            console.log(Allusers);
+        }
+
+
+
+
+
+
+
+
+        // let user = 'islim'
+
+        let user = {
+            firstName: 'oslim', 
+            lastName: 'testong', 
+            career: 'web dev',
+            address: {
+                postCode: 34353,
+                city: 'ibadan',
+                state: 'oyo'
+            } 
+        }
+
+        console.log(user.address.state);
+
+        let persin = 'oslim'
+
+
+        let student = {
+            firstName: 'tete',
+            lastName: 'djjd',
+            email: 'jjdj@gmai.com'
+        }
+        let product = {
+            productNAme: 'lolipop',
+            productPrice: 30,
+            productDesc: 'bla bla bla',
+            productCateg: 'sweet'
+        }
+
+        console.log(product);
+        // console.log(user);
+
+        let userList = []
+
+        userList.push({name: 'oslim', email: 'sam@gmail.com'})
+        userList.push({name: 'sam', email: 'testong@gmail.com'})
+
+        console.log(userList);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .disp{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    </style>
+</head>
+<body>
+    <input type="number"  id="startingPoint">
+    <input type="number" id="endingPoint">
+    <button onclick="handleClic()">Run</button>
+    <div class="disp"></div>
+
+    <script>
+
+        let startPoint = document.querySelector('#startingPoint')
+        let endPoint = document.querySelector('#endingPoint')
+        let display = document.querySelector('.disp')
+
+        // console.log(startPoint, endPoint);
+        function handleClic(){
+
+            if (startPoint.value  === '' || endPoint.value === '') {
+                alert('pls input the field')
+            }
+
+            for(let i = Number(startPoint.value); i <= Number(endPoint.value); i++){
+                for(let x = 1; x <= 12; x++){
+                    // console.log(x);
+                    display.innerHTML += `<p>${i} * ${x} =  ${i * x}</p>`
+                }
+            }
+
+        }
+        // continue
+
+        for (let i = 0; i < 10; i++) {
+           if (i % 2 === 0) {
+            continue
+           }
+
+           console.log(i);
+            
+        }
+
+        for(let i = 0; i < 10; i++){
+            if (i === 7) {
+                break
+            }
+            console.log(i);
+        }
+
+
+
+    </script>
+</body>
+</html>

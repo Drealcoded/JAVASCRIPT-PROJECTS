@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    ul{
+        padding: 20px;
+        background-color: green;
+    }
+
+</style>
+<body>
+    
+ <section>
+    <div class="container">
+        <button id="button">Click</button>
+        <p>ldld</p>
+     </div>
+ </section>
+
+    <p id="pTag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate commodi officia, consequatur iusto eveniet possimus dolores voluptas, repellendus nesciunt eos dolor, ipsa quod suscipit repudiandae ratione corporis culpa. Possimus, assumenda.</p>
+
+
+
+    <ul>
+        <li>list A</li>
+        <li>list B</li>
+        <li>list C</li>
+        <li>list D</li>
+        <li>list E</li>
+    </ul>
+
+
+    <script>
+
+        button.addEventListener('click', function(){
+            
+        })
+        
+
+        button.addEventListener('click', (e)=>{
+            // console.log('HELO WOLRD');
+            console.log(e.target);
+            // e.target.style.backgroundColor = 'red'
+            e.target.classList.add('hello')
+            e.target.innerHTML = 'wwpwpwpp'
+            // console.log(e.target.parentElement.parentElement);
+            e.target.disabled = true
+           
+        })
+        
+        // button.addEventListener('mouseover', (e)=>{
+        //     console.log(e);
+        //     // alert('i have been hover on');
+        // })
+
+        // pTag.addEventListener('copy', ()=>{
+        //     console.log('my website is copy right');
+        // })
+
+        let list = document.querySelectorAll('li')
+
+        // console.log(list);
+        // list.forEach((li)=>{
+        //     li.addEventListener('click', (e)=>{
+        //         console.log(e.target);
+        //     })
+        //     // console.log(elem);
+
+        // })
+
+        let ulList = document.querySelector('ul')
+
+        ulList.addEventListener('click', (e)=>{
+            if (e.target.nodeName === 'LI') {
+             console.log(e.target);   
+            }
+        })
+
+    </script>
+</body>
+</html>

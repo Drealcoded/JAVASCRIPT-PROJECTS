@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .popup{
+            width: 300px;
+            height: 300px;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hide{
+            
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+ <div class="container">
+    <div class="popup hide ">
+        <h1>hello</h1>
+    </div>
+ </div>
+ <!-- <input type="text" id="inpVal"> -->
+ <button onclick="showModalAndSendMEssage(Math.floor(Math.random() * 255))">Show message</button>
+
+
+    <script>
+        // let input = document.querySelector('#inpVal')
+        let popup = document.querySelector('.popup')
+        let h1Tag = document.querySelector('h1')
+
+
+        function showModalAndSendMEssage(random){
+            popup.classList.toggle('hide')
+            h1Tag.innerHTML = random
+        }
+
+    
+
+
+
+        // function declaration
+
+        // sayHi()
+        // function sayHi(){
+        //     alert('how are you')
+        // }
+
+        
+
+
+
+        
+        // console.log(sayHi);
+
+        // function expressio
+
+        // let sayHelo = function(){
+            
+        // }
+        // sayHelo()
+            let mess = 'djjd' // global scope
+
+        function sendMessage(){
+            let message = 'hello world' /// local scope
+            console.log(message); 
+
+            console.log(mess);
+        }
+
+
+        sendMessage()
+
+        // parament and argument
+
+
+        function getData(name, career){ //parameter
+            let message  = `hello ${name} you are a ${career}`
+            console.log(message);
+        }
+
+
+        getData('tzee', 'web dev') // argument
+
+
+
+        function alertUSer(message){
+            console.log(message);
+        }
+
+
+        alertUSer('you are logged in')
+        alertUSer('you are logged out')
+        alertUSer('you clear the cookies')
+
+
+
+//         let test = ''
+//         function doSomething(){
+//             test = 5 * 5
+
+//             console.log(test);
+//         }
+//         doSomething()
+
+// console.log(test);
+
+// let calculate = 'testing'
+
+    function calculate(){
+        let result = 5 * 5
+        return result
+        
+    }
+   let re = calculate()
+    console.log(re);
+
+
+
+
+    function check(){
+        let user = 'boy'
+        if (user === 'girl') {
+            return 'this user is a girl';
+        }else if(user === 'guy'){
+            return 'this user is a guy';
+        }else if(user === 'boy'){
+            return 'this user is a boy';
+        }
+    }
+
+  let res =  check()
+    console.log(res);
+
+
+
+
+    let expre = function(){
+        let tes = 3 * 4
+        return tes
+    }
+
+    let resp  = expre()
+
+console.log(resp);
+
+
+
+    function users(){
+        let users = ['teslim', 'ahmed', 'oslim']
+        return users
+    }
+
+    let people = users()
+
+    console.log(people);
+
+
+       
+    </script>
+</body>
+</html>

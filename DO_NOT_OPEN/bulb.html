@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+    body{
+        padding: 50px;
+        background-color: rgba(6, 12, 42, 0.915);
+    }
+    #image{
+        width: 200px;
+        margin: 40px;
+
+    }
+    h1{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: rgb(99, 200, 36);
+    }
+   
+    .container{
+        text-align: center;
+    }
+    #btn {
+        /* display: block; */
+        margin: auto;
+        padding: 20px;
+        background-color: rgb(63, 66, 63);
+        color: #fff;
+    }
+    
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome To The Light House</h1>
+        <img id="image" src="https://i.postimg.cc/KjK1wL3c/bulb-off.png" alt="">
+
+        <div>
+            <button id="btn" onclick="switchBulb()">ON</button>
+        </div>
+        
+        
+    
+    
+        
+        <!-- <div>
+            <button id="on-button" type="button" onclick="turnOnOFF()">PRESS</button>
+            <button hidden id="off-button" type="button" onclick="turnOff()">OFF</button>
+        </div>
+         -->
+
+        <!-- <img hidden src="https://o.remove.bg/downloads/e1279cb3-8800-49c1-81e9-e425bb653ac6/light-bulb-on-off-png-11553940186lbyqngqg1y-removebg-preview.png" alt="">
+        <button hidden id="b-button" type="button" onclick="changeBulbImage()">OFF</button> -->
+
+    </div>
+
+  
+</body>
+</html>
+
+<script>
+
+   
+    // let bulbOff = `https://i.postimg.cc/KjK1wL3c/bulb-off.png`
+    // let bulbOn = `https://i.postimg.cc/6QyTynzr/bulb-on.png`
+
+    // let bulb = document.getElementById('bulbImg')
+
+
+
+
+
+    function switchBulb(){
+            if (btn.innerHTML=="ON") {
+                image.src="https://i.postimg.cc/6QyTynzr/bulb-on.png"
+                btn.innerHTML = "OFF"
+            }else{
+                image.src="https://i.postimg.cc/KjK1wL3c/bulb-off.png"
+                btn.innerHTML = "ON"
+            }
+        }
+   
+    // bulb.src = bulbOff
+    // function turnOnOFF() {
+    //     if(bulb.src === bulbOff) {
+    //         bulb.src = bulbOn
+    //     }
+    //     else if(bulb.src === bulbOn) {
+    //         bulb.src = bulbOff
+    //     }
+    // }
+
+
+    
+    
+
+
+    // function turnOff() {
+    //     s.hidden = false
+
+    //     if (s.hidden === true) {
+    //         s.hidden = false
+            
+    //     }
+    //     else(s.hidden = true)
+    // }
+
+
+
+
+
+
+
+    // turnOnOFF()
+
+    // function turnOff() {
+             
+    // document.getElementById('bulbImg').src="https://i.postimg.cc/KjK1wL3c/bulb-off.png";
+    // }
+    
+    // function turnOn() {
+        
+    // document.getElementById('bulbImg').src="https://i.postimg.cc/6QyTynzr/bulb-on.png"; 
+            
+
+        
+        
+    // }
+
+       
+
+</script>
